@@ -1,0 +1,115 @@
+/* style.css (Untuk Menu Tomyam) */
+
+/* Variabel Warna */
+:root {
+    --primary-red: #A30000;      /* Merah Pedas */
+    --secondary-yellow: #FFD700; /* Emas */
+    --accent-green: #008000;     /* Hijau Harga */
+    --background-light: #fef8f5; /* Off-White/Krem */
+    --text-dark: #333333;
+}
+
+/* Base Style */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-top: 6px solid var(--primary-red); 
+}
+
+/* Header dan Judul */
+h1 {
+    color: var(--primary-red);
+    text-align: center;
+    font-size: 2.8em;
+    margin-bottom: 5px;
+    letter-spacing: 1.5px;
+}
+
+h2 {
+    color: var(--primary-red);
+    border-bottom: 2px solid var(--secondary-yellow); 
+    padding-bottom: 10px;
+    margin-top: 35px;
+    font-size: 1.8em;
+}
+
+.tagline {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+/* Menu Item Styling */
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px dashed #ddd;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #fff0f0; /* Efek hover lembut */
+    cursor: pointer;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.item-info {
+    flex-grow: 1;
+}
+
+.item-name {
+    font-weight: bold;
+    color: var(--text-dark);
+    font-size: 1.2em;
+    margin-bottom: 2px;
+}
+
+.item-desc {
+    font-size: 0.95em;
+    color: #777;
+}
+
+.item-price {
+    font-weight: bold;
+    color: var(--accent-green);
+    margin-left: 20px;
+    font-size: 1.2em;
+}
+
+/* Media Query untuk Mobile */
+@media (max-width: 600px) {
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .item-price {
+        margin-top: 10px;
+        margin-left: 0;
+        align-self: flex-end; /* Harga tetap di kanan bawah */
+    }
+    .container {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+}
